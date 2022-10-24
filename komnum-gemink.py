@@ -33,8 +33,6 @@ def root(xl, xu):
         fx.append(fr)
         rows = rows + 1
         table.append([rows, xl, xu, xr, fl, fr, fl*fr])
-        # table.append([rows, "{:.6f}".format(xl), "{:.6f}".format(xu), "{:.6f}".format(xr),
-        #             "{:.6f}".format(fl), "{:.6f}".format(fr), "{:.6f}".format(fl*fr)])
 
     if (fl * fr == 0): print("akar: " + "{:.2f}".format(xr))
     elif (fl * fr < 0): root(xl, xr)
