@@ -10,7 +10,7 @@
 #### Problem
 Implementasikan algoritma metode Bolzano menjadi sebuah program komputer yang dapat menampilkan proses iteratif numerik, lengkap dengan grafik fungsinya.
 
-Persamaan kuadrat yang kami gunakan adalah:
+Persamaan yang kami gunakan adalah:
 $x^3 - 4x^2 - 7x + 10$
 
 #### How to use
