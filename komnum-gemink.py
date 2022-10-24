@@ -50,6 +50,8 @@ print(tabulate(table, headers = ["iterasi", " xl", "xu", "xr", "f(xl)", "f(xr)",
 model = np.poly1d(np.polyfit(x, fx, 2))
 polyline = np.linspace(min(x), max(x), 50)
 
+plt.ylabel('f(x)')
+plt.xlabel('x')
 plt.scatter(x, fx)
 plt.plot(polyline, model(polyline), color='red')
 plt.show()
