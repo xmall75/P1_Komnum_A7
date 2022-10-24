@@ -11,8 +11,23 @@
 Implementasikan algoritma metode Bolzano menjadi sebuah program komputer yang dapat menampilkan proses iteratif numerik, lengkap dengan grafik fungsinya.
 
 Persamaan yang kami gunakan adalah:
-$x^3 - 4x^2 - 7x + 10$
+```
+x^3 - 4x^2 - 7x + 10
+```
 
+#### Penjelasan Formula Bolzano
+1. Taksiran pertama akar (root) atau baru: 
+```
+xr = (xl+xu)/2
+```
+2. Untuk mencari subinterval berikutnya:
+```
+if (fl * fr == 0): print("akar: " + "{:.2f}".format(xr)) # akar = xr, berhenti
+elif (fl * fr < 0): root(xl, xr) # xu = xr
+elif (fl * fr > 0): root(xr, xu) # xl = xr
+```
+3. Kembali ke langkah pertama dengan input baru sampai akar ditemukan
+  
 #### How to use
 1. Install dependencies yang dibutuhkan
 ```
