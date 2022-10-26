@@ -16,7 +16,7 @@ x^3 - 4x^2 - 7x + 10
 ```
 
 #### Penjelasan Formula Bolzano
-1. Cek terlebih dahulu apakah batas bawah (xl/xlower) dan batas atas (xu/xupper) memenuhi syarat metode Bolzano. Jika f(xl) * f(xu) ≥ 0, maka batasan tidak memenuhi syarat.
+1. Cek terlebih dahulu apakah batas bawah (xl/xlower) dan batas atas (xu/xupper) memenuhi syarat metode Bolzano. Jika perkalian `f(xl)` dan `f(xu)` lebih dari atau sama dengan 0, maka batasan tidak memenuhi syarat.
 ```py
 if (func(xl) * func(xu) >= 0): print("Batas bawah dan batas atas tidak memenuhi syarat metode bolzano.")
 ```
@@ -30,7 +30,6 @@ if (fl * fr == 0): print("akar: " + "{:.2f}".format(xr)) # akar = xr, berhenti
 elif (fl * fr < 0): root(xl, xr) # xu = xr
 elif (fl * fr > 0): root(xr, xu) # xl = xr
 ```
-4. Kembali ke langkah pertama dengan input baru sampai akar ditemukan
   
 #### How to use
 1. Install dependencies yang dibutuhkan
