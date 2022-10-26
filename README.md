@@ -26,6 +26,9 @@ xr = (xl + xu) / 2
 ```
 3. Untuk mencari subinterval berikutnya:
 ```py
+fl = func(xl)
+fr = func(xr)
+
 if (fl * fr == 0): print("akar: " + "{:.2f}".format(xr)) # akar = xr, berhenti
 elif (fl * fr < 0): root(xl, xr) # xu = xr
 elif (fl * fr > 0): root(xr, xu) # xl = xr
