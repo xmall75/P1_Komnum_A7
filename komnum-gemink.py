@@ -38,18 +38,24 @@ def root(xl, xu):
     elif (fl * fr < 0): root(xl, xr)
     elif (fl * fr > 0): root(xr, xu)
 
+print("Masukkan batas bawah:")
 xl = float(input())
+print("Masukkan batas atas:")
 xu = float(input())
-maxit = int(input())
-root(xl, xu)
 
-print(tabulate(table, headers = ["iterasi", " xl", "xu", "xr", "f(xl)", "f(xr)", "f(xl) * f(xr)"], tablefmt = 'grid'))
+if (func(xl) * func(xu) >= 0): print("Batas bawah dan batas atas tidak memenuhi syarat metode bolzano.")
+else:
+    print("Masukkan banyak iterasi maksimum yang akan ditampilkan:")
+    maxit = int(input())
+    root(xl, xu)
 
-model = np.poly1d(np.polyfit(x, fx, 2))
-polyline = np.linspace(min(x), max(x), 50)
+    print(tabulate(table, headers = ["iterasi", " xl", "xu", "xr", "f(xl)", "f(xr)", "f(xl) * f(xr)"], tablefmt = 'grid'))
 
-plt.ylabel('f(x)')
-plt.xlabel('x')
-plt.scatter(x, fx)
-plt.plot(polyline, model(polyline), color='red')
-plt.show()
+    model = np.poly1d(np.polyfit(x, fx, 2))
+    polyline = np.linspace(min(x), max(x), 50)
+
+    plt.ylabel('f(x)')
+    plt.xlabel('x')
+    plt.scatter(x, fx)
+    plt.plot(polyline, model(polyline), color='red')
+    plt.show()
