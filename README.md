@@ -16,17 +16,21 @@ x^3 - 4x^2 - 7x + 10
 ```
 
 #### Penjelasan Formula Bolzano
-1. Taksiran pertama akar (root) atau baru: 
+1. Cek terlebih dahulu apakah batas bawah (xl/xlower) dan batas atas (xu/xupper) memenuhi syarat metode Bolzano. Jika f(xl) * f(xu) ≥ 0, maka batasan tidak memenuhi syarat.
+```py
+if (func(xl) * func(xu) >= 0): print("Batas bawah dan batas atas tidak memenuhi syarat metode bolzano.")
 ```
-xr = (xl+xu)/2
+2. Taksiran pertama akar (root) atau baru: 
+```py
+xr = (xl + xu) / 2
 ```
-2. Untuk mencari subinterval berikutnya:
-```
+3. Untuk mencari subinterval berikutnya:
+```py
 if (fl * fr == 0): print("akar: " + "{:.2f}".format(xr)) # akar = xr, berhenti
 elif (fl * fr < 0): root(xl, xr) # xu = xr
 elif (fl * fr > 0): root(xr, xu) # xl = xr
 ```
-3. Kembali ke langkah pertama dengan input baru sampai akar ditemukan
+4. Kembali ke langkah pertama dengan input baru sampai akar ditemukan
   
 #### How to use
 1. Install dependencies yang dibutuhkan
@@ -39,8 +43,8 @@ $ pip install tabulate
 2. Run `komnum-gemink.py`.
 
 3. Input:
-  - Input pertama XLower
-  - Input kedua XUpper
+  - Input pertama batasan bawah (xl/xlower)
+  - Input kedua batasan atas (xu/xupper)
   - Input ketiga maksimal iterasi
   
 4. Output dan grafik akan muncul.
